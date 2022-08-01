@@ -9,17 +9,22 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <header>Anime Night</header>
-    <div id="rps">
-        <p>RPS Goes Here</p>
+    <div id="top-div">
+        <h1>Anime Movie Night</h1>
+        <h2>Create an anime movie card!</h2>
+        <form id="form">
+            <input type="text" class="new-movie" name="movie" placeholder="Anime Movie Name"><br>
+            <input type="text" class="new-movie" name="image" placeholder="Image URL"><br>
+            <input type="text" class="new-movie" name="score" placeholder="Score"><br>
+            <input type="text" class="new-movie" name="rating" placeholder="Rating"><br>
+            <button type="button" id="submit">Add My Movie!</button>
+        </form>
+       
+        -decorative image to the right of all of this
     </div>
-    <div id="text">
-        <p>Text goes here</p>
+  
+    <div id="bottom-div">
+        <div id="card-div"></div>
     </div>
-    <div id="anime">
-        <p>Anime goes here</p>
-    </div>
-
-    
 </body>
 </html>
