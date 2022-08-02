@@ -16,13 +16,13 @@ let grid = document.getElementById('grid')
 const renderMovie = (movie) => {
    let div = document.createElement('div')
    div.classList.add('column')
-   div.innerText = `${movie.title} \nRating: PG-13 \nScore: ${movie.score}`
+   div.innerText = `${movie.title} \nRating: ${movie.rated} Score: ${movie.score}`
 
 
    //creating an image element 
    let image = document.createElement('img')
    image.src = movie.image_url
-   div.append(image)
+    div.append(image)
     grid.append(div)
     
    // appending to .css hover card effect
@@ -30,26 +30,22 @@ const renderMovie = (movie) => {
 //    bestCard.append(div)
 
 }
-
-const newMovieSubmit = () => {
-    const form = document.querySelector('#form')
+const form = document.querySelector('#form')
     form.addEventListener('submit', (e) => {
-    e.preventDefault()
+        newMovieSubmit(e);
+    })
+
+const newMovieSubmit = (e) => {
     
-    let newImage = e.target.image.value
-    let newMovieTitle = e.target.movie.value
-    let newScore = e.target.score.value
-    let newRating = e.target.rating.value
-        
+    e.preventDefault()
     let newMovieObj = {
-        image: newImage,
-        title: newMovieTitle,
-        score: newScore,
-        rated: newRating,
+        image: e.target.image.value,
+        title: e.target.movie.value,
+        score: e.target.score.value,
+        rated: e.target.rating.value,
             }
         
     renderMovie(newMovieObj)
     form.reset()
-    })
-}
+    }
 
