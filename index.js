@@ -1,4 +1,17 @@
 const url = "https://api.jikan.moe/v3/search/anime?q=naruto"
+const topDiv = document.querySelector('#top-div')
+let darkLightButton = document.querySelector('#dark-light')
+darkLightButton.innerText = "Dark"
+darkLightButton.addEventListener('mouseover', (e) => {
+  darkLightButton.innerText = "Light"
+  topDiv.style.backgroundColor = "grey";
+  grid.style.backgroundColor = "black";
+})
+darkLightButton.addEventListener('mouseout', (e) => {
+  darkLightButton.innerText = "Dark"
+  topDiv.style.backgroundColor = "yellow"
+  grid.style.backgroundColor = "orange"
+})
 
 
 
