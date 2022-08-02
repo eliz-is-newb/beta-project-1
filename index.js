@@ -1,6 +1,6 @@
 const url = "https://api.jikan.moe/v3/search/anime?q=naruto"
 
-const cardDiv = document.querySelector('#card-div')
+
 
 fetch(url)
 .then(res=> res.json())
@@ -26,26 +26,26 @@ const renderMovie = (movie) => {
     grid.append(div)
     
    // appending to .css hover card effect
-   let bestCard = document.getElementById("best-card")
+//    let bestCard = document.getElementsByClassName("card-div")
 //    bestCard.append(div)
 
 }
 const form = document.querySelector('#form')
-    form.addEventListener('submit', (e) => {
-        newMovieSubmit(e);
-    })
+form.addEventListener('submit', (e) => {
+    newMovieSubmit(e);
+})
 
 const newMovieSubmit = (e) => {
-    
+    console.log('hi)')
     e.preventDefault()
     let newMovieObj = {
-        image: e.target.image.value,
+        image_url: e.target.image.value,
         title: e.target.movie.value,
         score: e.target.score.value,
         rated: e.target.rating.value,
-            }
-        
+    }
+    console.log(newMovieObj)
     renderMovie(newMovieObj)
     form.reset()
-    }
+}
 
