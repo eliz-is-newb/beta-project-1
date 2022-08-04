@@ -1,17 +1,83 @@
+@font-face {
+  font-family: 'Conv_Starborn';
+  src: url('Starborn.eot');
+  src: local('â˜º'), url('Starborn.ttf') format('truetype'), url('Starborn.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#mascot {
+  max-width: 50%;
+  height: auto;
+}
+
+#form {
+  margin-left: 40px;
+}
 .columns { 
-  column-gap: 10px;
+  filter: drop-shadow(3px 4px 4px black);
+  column-gap: 30px;
   display: grid;
   grid-template-columns: auto auto auto auto;
+  padding: 40px; 
 }
+
+.column {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
 body {
-  background-color: blueviolet;
+  background-color: white;
+  background-image: url('pix/d3g0g3s-50af27b1-c2b3-42f9-a6bd-5d48235b5d86.jpg');
+  /* background-size: cover; */
 }
 
 div {
+  font-family: 'Conv_Starborn';
   color: white;
+  color: white;
+	font-size: 15px;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
  }
   
- h1, h2 {
-  color: black;
+#top-div h2 {
+  margin-bottom: 20px;
+  font-family: 'Conv_Starborn';
+}
+ #top-div h1 {
+  font-family: 'Conv_Starborn';
+
+ }
+
+
+ #submit{
+  margin-top: 20px;
+  margin-bottom: 20px; 
+ }
+
+ #top-div #mascot {
+  margin-bottom: -8px;
+ }
+
+ #top-div {
+  text-align: center;
+
+  color: rgb(206, 126, 195);
+  -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: lightskyblue;
+  font-family: 'Conv_Starborn';
+
  }
  
+
+ h1 {
+  font-family: 'Conv_Starborn';
+ }
+
+ .images{
+  max-width: 100%;
+  height: auto;
+ }
